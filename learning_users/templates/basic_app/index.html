@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load staticfiles %}
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/my.css"%}">
+  </head>
+
+
+{% block body_block %}
+
+<div class="">
+   <h1>ENJOY.com</h1>
+  {% if user.is_authenticated %}
+  <h1>Welcome</h1>
+  <h2>The Basics. Click on the headings below to see a priliminary object.</h2>
+  <ul>
+    <h1>  <li><a href="{% static "image/i.gif" %}">INDIA</a></li></h1>
+    <h1>  <li><a href="{% static "image/a.jpg" %}">A Tribute To A Friend's Work.</a></li></h1>
+
+  </ul>
+
+  {% else %}
+
+  {% endif %}
+
+</div>
+{%endblock%}
+</html>

@@ -1,0 +1,30 @@
+{% extends "basic_app/base.html" %}
+{% load staticfiles %}
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/m.css"%}">
+  </head>
+
+{% block body_block %}
+<div class="">
+  {% if registered %}
+   <h1>Registered</h1>
+   <img src="{% static "image/g.gif" %}" alt="">
+  {% else %}
+  <h1>Register Here:</h1>
+  <h2>Fill up the Form:</h2>
+  <form   enctype="multipart/form-data" method="post">
+  {% csrf_token %}
+  {{user_form.as_p}}
+  {{profile_form.as_p}}
+  <input type="submit" name="" value="Register">
+  </form>
+
+
+  {% endif %}
+</div>
+
+
+{% endblock %}
