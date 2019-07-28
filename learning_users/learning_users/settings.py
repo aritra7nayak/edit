@@ -26,7 +26,7 @@ SECRET_KEY = 'j9t0=(wpv79scguo+)-wfxv@j+!a2(96)p=q@q4tzkhfy2w^=t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aritra7.pythonanywhere.com']
 
 
 # Application definition
